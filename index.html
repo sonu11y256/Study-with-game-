@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study with Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 1200px;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .description {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .description p {
+            font-size: 1.2rem;
+            color: #333;
+        }
+        .class-section {
+            margin-bottom: 1rem;
+        }
+        .class-header {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .class-header:hover {
+            background-color: #0056b3;
+        }
+        .subject-boxes {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .subject-box {
+            width: 150px;
+            height: 100px;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .subject-box:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .game-zone {
+            margin-top: 2rem;
+        }
+        .game-box {
+            width: 150px;
+            height: 100px;
+            background-color: #28a745;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 1rem auto;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .game-box:hover {
+            background-color: #1c7430;
+        }
+    </style>
+    <script>
+        // Function to toggle the visibility of subject links
+        function toggleSubjects(classId) {
+            const subjectBoxes = document.getElementById(classId);
+            if (subjectBoxes.style.display === "flex") {
+                subjectBoxes.style.display = "none";
+            } else {
+                subjectBoxes.style.display = "flex";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Study with Game</h1>
+    </header>
+
+    <title>Search Bar Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .search-container {
+            margin: 50px auto;
+            width: 80%;
+            max-width: 600px;
+        }
+        .search-box {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+        .search-button {
+            padding: 10px 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-button:hover {
+            background-color: #0056b3;
+        }
+        .results {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        function search() {
+            const input = document.getElementById("search-input").value.toLowerCase();
+            const result = document.getElementById("result");
+            
+            if (input) {
+                result.textContent = `You searched for: "${input}"`;
+            } else {
+                result.textContent = "Please enter a search term.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="search-container">
+        <h1>Search Bar </h1>
+        <input type="text" id="search-input" class="search-box" placeholder="Search here...">
+        <button class="search-button" onclick="search()">Search</button>
+        <div id="result" class="results"></div>
+    </div>
+    <!-- Description Section -->
+    <div class="container description">
+        <h2>Welcome to Study with Monu</h2>
+        <p>Your ultimate destination for study motivation, NCERT & RBSE books, model papers, and more. Let's learn and grow together!</p>
+    </div>
+
+    <!-- Class Sections -->
+    <div class="container">
+<h2>NCERT Books (2024-25)</h2>
+
+        <!-- Repeat for Class 5 to 10 -->
+
+
+
+
+<div class="class-section">
+    <div class="class-header" onclick="toggleSubjects('class5-subjects')">
+        Class 5 Books
+    </div>
+    <div id="class5-subjects" class="subject-boxes">
+        <!-- Math Section with Chapters -->
+        <div class="subject-box" onclick="toggleSubjects('class5-math-chapters')">Math</div>
+        <div id="class5-math-chapters" class="subject-boxes" style="flex-direction: column; display: none;">
+
+<a class="subject-smallbox" href="https://drive.google.com/file/d/1RBvUTAYWevt3x7Utjt1TwxdHhTV8bmkb/view?usp=drivesdk/class5-math-content.pdf" target="_blank">Content</a>
+
+<a class="subject-smallbox" href="https://drive.google.com/file/d/1R7ezfATaavXr7I72ARZ4U2b29208Vlok/view?usp=drivesdk/class5-math-chapter1.pdf" target="_blank">Chapter 1</a>
+
+         <a class="subject-smallbox" href="https://drive.google.com/file/d/1R7SD67Fi7_rty01OkOAEE6P2d9xP75Hf/view?usp=drivesdk/class5-math-chapter2.pdf" target="_blank">Chapter 2</a>
+   
+<a class="subject-smallbox" href="https://drive.google.com/file/d/1QzoVr5pDqY4R6c1T1aSn1Kzh6-js6mmd/view?usp=drivesdk/class5-math-chapter3.pdf" target="_blank">Chapter 3</a>
+
+<a class="subject-smallbox" href="https://drive.google.com/file/d/1QgoY1V36lpGW7K2St0yXRoQQL9PcnsnF/view?usp=drivesdk/class5-math-chapter4.pdf" target="_blank">Chapter 4</a>
+
+
+<a class="subject-smallbox" href="/class5-math-chapter5.pdf" target="_blank">Chapter 5</a>
+
+
+<a class="subject-smallbox" href="/class5-math-chapter6.pdf" target="_blank">Chapter 6</a>
+
+
+<a class="subject-smallbox" href="/class5-math-chapter7.pdf" target="_blank">Chapter 7</a>
+
+
+<a class="subject-smallbox" href="/class5-math-chapter8.pdf" target="_blank">Chapter 8</a>
+
+
+<a class="subject-smallbox" href="/class5-math-chapter9.pdf" target="_blank">Chapter 9</a>
+
+
+<a class="subject-smallbox" href="/class5-math-chapter10.pdf" target="_blank">Chapter 10</a>
+
+
+<a class="subject-smallbox" href="/class5-math-chapter11.pdf" target="_blank">Chapter 11</a>
+
+
+
+<a class="subject-smallbox" href="/class5-math-chapter12.pdf" target="_blank">Chapter 12</a>
+
+
+
+<a class="subject-smallbox" href="/class5-math-chapter13.pdf" target="_blank">Chapter 13</a>
+
+
+
+<a class="subject-smallbox" href="/class5-math-chapter14.pdf" target="_blank">Chapter 14</a>
+
+     </div>
+            
+
+   <!-- environmental Section with Chapters -->
+        <div class="subject-box" onclick="toggleSubjects('class5-environmental-chapters')">environmental</div>
+        <div id="class5-environmental-chapters" class="subject-boxes" style="flex-direction: column; display: none;">
+
+
+<a class="subject-smallbox" href="/class5-environmental-content.pdf" target="_blank">content</a>
+   
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+   
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+   
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+   
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+   
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+   
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+   
+<a class="subject-smallbox" href="/class5-environmental-chapter1.pdf" target="_blank">chapter 1</a>
+
+
+
+  </div>
+
+
+
+               
+                <a class="subject-box" href="class5-sst.pdf" target="_blank">SST</a>
+                <a class="subject-box" href="class5-sanskrit.pdf" target="_blank">Sanskrit</a>
+                <a class="subject-box" href="class5-hindi.pdf" target="_blank">Hindi</a>
+                <a class="subject-box" href="class5-english.pdf" target="_blank">English</a>
+            </div>
+        </div>
+
+        <div class="class-section">
+            <div class="class-header" onclick="toggleSubjects('class6-subjects')">
+                Class 6 Books
+            </div>
+            <div id="class6-subjects" class="subject-boxes">
+                <a class="subject-box" href="class6-math.pdf" target="_blank">Math</a>
+                <a class="subject-box" href="class6-science.pdf" target="_blank">Science</a>
+                <a class="subject-box" href="class6-sst.pdf" target="_blank">SST</a>
+                <a class="subject-box" href="class6-sanskrit.pdf" target="_blank">Sanskrit</a>
+                <a class="subject-box" href="class6-hindi.pdf" target="_blank">Hindi</a>
+                <a class="subject-box" href="class6-english.pdf" target="_blank">English</a>
+            </div>
+        </div>
+
+       <div class="class-section">
+            <div class="class-header" onclick="toggleSubjects('class7-subjects')">
+                Class 7 Books
+            </div>
+            <div id="class7-subjects" class="subject-boxes">
+                <a class="subject-box" href="class7-math.pdf" target="_blank">Math</a>
+                <a class="subject-box" href="class7-science.pdf" target="_blank">Science</a>
+                <a class="subject-box" href="class7-sst.pdf" target="_blank">SST</a>
+                <a class="subject-box" href="class7-sanskrit.pdf" target="_blank">Sanskrit</a>
+                <a class="subject-box" href="class7-hindi.pdf" target="_blank">Hindi</a>
+                <a class="subject-box" href="class7-english.pdf" target="_blank">English</a>
+            </div>
+        </div>
+
+    <div class="class-section">
+            <div class="class-header" onclick="toggleSubjects('class8-subjects')">
+                Class 8 Books
+            </div>
+            <div id="class8-subjects" class="subject-boxes">
+                <a class="subject-box" href="class8-math.pdf" target="_blank">Math</a>
+                <a class="subject-box" href="class8-science.pdf" target="_blank">Science</a>
+                <a class="subject-box" href="class8-sst.pdf" target="_blank">SST</a>
+                <a class="subject-box" href="class8-sanskrit.pdf" target="_blank">Sanskrit</a>
+                <a class="subject-box" href="class8-hindi.pdf" target="_blank">Hindi</a>
+                <a class="subject-box" href="class8-english.pdf" target="_blank">English</a>
+            </div>
+        </div>
+
+<div class="class-section">
+            <div class="class-header" onclick="toggleSubjects('class9-subjects')">
+                Class 9 Books
+            </div>
+            <div id="class9-subjects" class="subject-boxes">
+                <a class="subject-box" href="class9-math.pdf" target="_blank">Math</a>
+                <a class="subject-box" href="class9-science.pdf" target="_blank">Science</a>
+                <a class="subject-box" href="class9-sst.pdf" target="_blank">SST</a>
+                <a class="subject-box" href="class9-sanskrit.pdf" target="_blank">Sanskrit</a>
+                <a class="subject-box" href="class9-hindi.pdf" target="_blank">Hindi</a>
+                <a class="subject-box" href="class9-english.pdf" target="_blank">English</a>
+            </div>
+        </div>
+<div class="class-section">
+            <div class="class-header" onclick="toggleSubjects('class10-subjects')">
+                Class 10 Books
+            </div>
+            <div id="class10-subjects" class="subject-boxes">
+                <a class="subject-box" href="class10-math.pdf" target="_blank">Math</a>
+                <a class="subject-box" href="class10-science.pdf" target="_blank">Science</a>
+                <a class="subject-box" href="class10-sst.pdf" target="_blank">SST</a>
+                <a class="subject-box" href="class10-sanskrit.pdf" target="_blank">Sanskrit</a>
+                <a class="subject-box" href="class10-hindi.pdf" target="_blank">Hindi</a>
+                <a class="subject-box" href="class10-english.pdf" target="_blank">English</a>
+            </div>
+        </div>
+
+
+    </div>
+
+ <div class="container">
+        <h2>RBSE Model Papers (2024-25)</h2>
+        
+        <!-- RBSE Class 5-->
+        <div class="class-section">
+            <div class="class-header" onclick="toggleSubjects('rbse-class5')">
+                Class  5 RBSE Model Papers
+            </div>
+            <div id="rbse-class5" class="subject-boxes">
+                <a class="subject-box" href="rbse-class5-math.pdf" target="_blank">Math</a>
+                <a class="subject-box" href="rbse-class5-science.pdf" target="_blank">Science</a>
+                <a class="subject-box" href="rbse-class5-sst.pdf" target="_blank">SST</a>
+                <a class="subject-box" href="rbse-class5-sanskrit.pdf" target="_blank">Sanskrit</a>
+                <a class="subject-box" href="rbse-class5-hindi.pdf" target="_blank">Hindi</a>
+                <a class="subject-box" href="rbse-class5-english.pdf" target="_blank">English</a>
+            </div>
+        </div>
+
+        <!-- RBSE Class 8 -->
+        <div class="class-section">
+            <div class="class-header" onclick="toggleSubjects('rbse-class8')">
+                Class 8 RBSE Model Papers
+            </div>
+            <div id="rbse-class8" class="subject-boxes">
+                <a class="subject-box" href="rbse-class8-math.pdf" target="_blank">Math</a>
+                <a class="subject-box" href="rbse-class8-science.pdf" target="_blank">Science</a>
+                <a class="subject-box" href="rbse-class8-sst.pdf" target="_blank">SST</a>
+                <a class="subject-box" href="rbse-class8-sanskrit.pdf" target="_blank">Sanskrit</a>
+                <a class="subject-box" href="rbse-class8-hindi.pdf" target="_blank">Hindi</a>
+                <a class="subject-box" href="rbse-class8-english.pdf" target="_blank">English</a>
+            </div>
+        </div>
+                <!-- RBSE Class 10 -->
+        <div class="class-section">
+            <div class="class-header" onclick="toggleSubjects('rbse-class10')">
+                Class 10 RBSE Model Papers
+            </div>
+            <div id="rbse-class10" class="subject-boxes">
+                <a class="subject-box" href="rbse-class10-math.pdf" target="_blank">Math</a>
+                <a class="subject-box" href="rbse-class10-science.pdf" target="_blank">Science</a>
+                <a class="subject-box" href="rbse-class10-sst.pdf" target="_blank">SST</a>
+                <a class="subject-box" href="rbse-class10-sanskrit.pdf" target="_blank">Sanskrit</a>
+                <a class="subject-box" href="rbse-class10-hindi.pdf" target="_blank">Hindi</a>
+                <a class="subject-box" href="rbse-class10-english.pdf" target="_blank">English</a>
+            </div>
+        </div>
+
+        
+        
+
+        <h2>CBSE Model Papers (2024-25)</h2>
+
+        <!-- CBSE Class 10 -->
+        <div class="class-section">
+            <div class="class-header" onclick="toggleSubjects('cbse-class10')">
+                Class 10 CBSE Model Papers
+            </div>
+            <div id="cbse-class10" class="subject-boxes">
+                <a class="subject-box" href="cbse-class10-math.pdf" target="_blank">Math</a>
+                <a class="subject-box" href="cbse-class10-science.pdf" target="_blank">Science</a>
+                <a class="subject-box" href="cbse-class10-sst.pdf" target="_blank">SST</a>
+                <a class="subject-box" href="cbse-class10-sanskrit.pdf" target="_blank">Sanskrit</a>
+                <a class="subject-box" href="cbse-class10-hindi.pdf" target="_blank">Hindi</a>
+                <a class="subject-box" href="cbse-class10-english.pdf" target="_blank">English</a>
+            </div>
+        </div>
+
+        
+
+    <!-- Game Zone -->
+    <div class="container game-zone">
+        <h2>Game Zone</h2>
+        <a class="game-box" href="tic-tac-toe.html" target="_blank">Tic-Tac-Toe</a>
+        <a class="game-box" href="paper-cutting.html" target="_blank">Paper Cutting</a>
+        <a class="game-box" href="memory-game.html" target="_blank">Memory Game</a>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Study with Monu - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
